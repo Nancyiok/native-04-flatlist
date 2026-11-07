@@ -67,7 +67,7 @@ function AddWord({ switchScreen, setWords }) {
     const timeoutId = setTimeout(async () => {
       const result = await getWordInfo(searchWord.trim());
       if (!cancelled) setWordInfo(result);
-    }, 500);
+    }, 1000);
 
     return () => {
       cancelled = true;
